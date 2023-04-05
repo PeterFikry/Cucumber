@@ -6,6 +6,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/Features",glue = "StepDefinitions",dryRun = false)
+@CucumberOptions(features = "src/test/resources/Features",
+                glue = "StepDefinitions",
+                dryRun = false)
+
 public class SmokeRunner {
 }
+
+//tags option will execute the tagged testcase as mention in your runner class

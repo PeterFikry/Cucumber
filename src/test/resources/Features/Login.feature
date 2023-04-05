@@ -1,4 +1,6 @@
 Feature: Login Functionalities
+
+  @testCase1
   Scenario: Valid Admin login
     Given open the browser and launch HRMS application
     When user enters valid email and valid password
