@@ -54,7 +54,7 @@ Feature: Login Functionalities
     #     : of what goes in between the test steps
 
 
-  #BACKGROUND : Its the clubbing of common steps in different scenarios of a feature tile
+  #BACKGROUND : Its the clubbing of common steps in different scenarios of a feature file
   #             till flow is not broken
   # 1. Hard Code
   # 2. Config file
