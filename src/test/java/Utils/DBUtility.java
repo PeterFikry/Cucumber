@@ -1,5 +1,7 @@
 package Utils;
 
+
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -14,7 +16,7 @@ public class DBUtility {
     private static ResultSetMetaData rSetMetaData;
 
     //this method create connection to DB, execute query and return object for resultset
-    public static ResultSet getResultSet(String sqlQuery) {
+    public static ResultSet getResultSet(String sqlQuery){
         try {
             conn = DriverManager.getConnection(
                     ConfigReader.getPropertyValue("urldb"),
@@ -30,7 +32,7 @@ public class DBUtility {
     }
 
     //this method will return the object of rsetmetadata
-    public static ResultSetMetaData getrSetMetaDa(String query) {
+    public static ResultSetMetaData getrSetMetaDa(String query){
         rset = getResultSet(query);
         rSetMetaData = null;
         //we use this line to get the data in tabular format so that
@@ -61,7 +63,7 @@ public class DBUtility {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
+        }finally {
             DBUtility.closeResultSet(rset);
             DBUtility.closeStatement(statement);
             DBUtility.closeConnection(conn);
@@ -77,8 +79,8 @@ public class DBUtility {
     //close resultset
     //close statement
     //close connection
-    public static void closeResultSet(ResultSet rset) {
-        if (rset != null) {
+    public static void closeResultSet(ResultSet rset){
+        if(rset!=null){
             try {
                 rset.close();
             } catch (SQLException e) {
@@ -87,8 +89,8 @@ public class DBUtility {
         }
     }
 
-    public static void closeStatement(Statement statement) {
-        if (statement != null) {
+    public static void closeStatement(Statement statement){
+        if(statement!=null){
             try {
                 statement.close();
             } catch (SQLException e) {
@@ -98,7 +100,7 @@ public class DBUtility {
     }
 
     public static void closeConnection(Connection conn) {
-        if (conn != null) {
+        if(conn!=null){
             try {
                 conn.close();
             } catch (SQLException e) {
